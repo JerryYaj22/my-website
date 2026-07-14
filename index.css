@@ -586,6 +586,349 @@
     font-size:1rem;
 }
 
+/* ==========================================
+   RESPONSIVE CSS
+   Add this at the very bottom
+========================================== */
+
+/* Prevent horizontal scrolling */
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* -----------------------------
+   Large Laptops
+------------------------------*/
+
+@media (max-width:1400px){
+
+    .navbar,
+    .hero-content,
+    .features,
+    .as-services-section,
+    .as-showcase,
+    .as-process-section{
+        padding-left:30px;
+        padding-right:30px;
+    }
+
+    .hero h1{
+        font-size:clamp(3rem,5vw,4.5rem);
+    }
+
+}
+
+/* -----------------------------
+   Tablets
+------------------------------*/
+
+@media (max-width:1100px){
+
+    .hero-content{
+        flex-direction:column;
+        text-align:center;
+        gap:70px;
+    }
+
+    .hero-left,
+    .hero-right{
+        width:100%;
+    }
+
+    .hero p{
+        margin:0 auto 40px;
+    }
+
+    .buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .logo-wrapper{
+        width:480px;
+        height:480px;
+    }
+
+    .main-logo{
+        width:380px;
+    }
+
+    .features{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .as-showcase{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:60px;
+    }
+
+    .as-browser-content{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .as-process-line{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .as-process-line::before{
+        display:none;
+    }
+
+}
+
+/* -----------------------------
+   Small Tablets
+------------------------------*/
+
+@media (max-width:900px){
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+        padding:20px;
+    }
+
+    .navbar ul{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:20px;
+    }
+
+    .hero{
+        padding-bottom:10rem;
+    }
+
+    .hero-content{
+        padding:80px 25px;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero p{
+        font-size:1.1rem;
+    }
+
+    .logo-wrapper{
+        width:360px;
+        height:360px;
+    }
+
+    .main-logo{
+        width:300px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .as-browser-nav{
+        flex-direction:column;
+        gap:20px;
+        align-items:center;
+    }
+
+    .as-browser-nav div{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+}
+
+/* -----------------------------
+   Phones
+------------------------------*/
+
+@media (max-width:768px){
+
+    section{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .hero-content{
+        padding:70px 20px;
+    }
+
+    .badge{
+        font-size:11px;
+        letter-spacing:1px;
+    }
+
+    .hero h1{
+        font-size:2.4rem;
+        line-height:1.2;
+    }
+
+    .hero p{
+        font-size:1rem;
+        line-height:1.7;
+    }
+
+    .buttons{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .primary,
+    .secondary{
+        width:100%;
+        text-align:center;
+    }
+
+    .logo-wrapper{
+        width:280px;
+        height:280px;
+    }
+
+    .main-logo{
+        width:230px;
+    }
+
+    .glow{
+        width:180px;
+        height:180px;
+    }
+
+    .as-main-title,
+    .as-showcase-left h2,
+    .as-process-header h2{
+        font-size:2.2rem;
+    }
+
+    .as-browser-address{
+        width:100%;
+        font-size:.8rem;
+    }
+
+    .as-browser-body{
+        padding:25px;
+    }
+
+    .as-browser-text h3{
+        font-size:2rem;
+    }
+
+    .as-browser-buttons{
+        flex-direction:column;
+    }
+
+    .as-browser-buttons button{
+        width:100%;
+    }
+
+    .as-feature-card,
+    .card{
+        padding:28px;
+    }
+
+    .as-process-line{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* -----------------------------
+   Small Phones
+------------------------------*/
+
+@media (max-width:480px){
+
+    .navbar{
+        padding:15px;
+    }
+
+    .logo img{
+        width:140px;
+    }
+
+    .navbar ul{
+        gap:15px;
+    }
+
+    .navbar a{
+        font-size:14px;
+    }
+
+    .hero{
+        min-height:auto;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .hero p{
+        font-size:.95rem;
+    }
+
+    .logo-wrapper{
+        width:220px;
+        height:220px;
+    }
+
+    .main-logo{
+        width:180px;
+    }
+
+    .hero-content{
+        gap:50px;
+    }
+
+    .card,
+    .as-feature-card{
+        padding:22px;
+    }
+
+    .as-main-title,
+    .as-showcase-left h2,
+    .as-process-header h2{
+        font-size:1.8rem;
+    }
+
+    .as-browser-text h3{
+        font-size:1.6rem;
+    }
+
+}
+
+/* -----------------------------
+   Very Small Phones
+------------------------------*/
+
+@media (max-width:360px){
+
+    .hero h1{
+        font-size:1.7rem;
+    }
+
+    .hero p{
+        font-size:.9rem;
+    }
+
+    .primary,
+    .secondary{
+        padding:15px;
+        font-size:.9rem;
+    }
+
+    .main-logo{
+        width:150px;
+    }
+
+}
+/* END OF INDEX */
+
 /* FOOTER */
 .index-footer{
     background: none;
@@ -639,7 +982,7 @@ footer{
 }
 /* END OF FOOTER PAGE */
 
-/* ABOUT PAGE */
+/* START OF ABOUT PAGE */
 .about{
     padding: 100px 80px;
     background:linear-gradient(to right,#020617,#02325f,#020617);
@@ -703,6 +1046,161 @@ footer{
     padding: 16px 30px;
     border-radius: 10px;
     display: inline-block;
+}
+/* ==========================================
+   ABOUT PAGE RESPONSIVE
+========================================== */
+
+/* Large Desktop */
+@media (max-width:1400px){
+
+    .about{
+        padding:90px 50px;
+    }
+
+    .about-container{
+        gap:60px;
+    }
+
+}
+
+/* Laptop */
+@media (max-width:1200px){
+
+    .about-text h2{
+        font-size:clamp(2.8rem,5vw,3.5rem);
+    }
+
+    .about-text p{
+        font-size:1rem;
+    }
+
+    .about-image img{
+        width:420px;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:992px){
+
+    .about{
+        padding:80px 30px;
+    }
+
+    .about-container{
+        flex-direction:column;
+        text-align:center;
+        gap:50px;
+    }
+
+    .about-text{
+        max-width:700px;
+    }
+
+    .about-image{
+        order:-1;
+    }
+
+    .about-image img{
+        width:350px;
+    }
+
+    .about-btn{
+        margin:auto;
+    }
+
+}
+
+/* Large Phones */
+@media (max-width:768px){
+
+    .about{
+        padding:70px 20px;
+    }
+
+    .about-me{
+        font-size:24px;
+    }
+
+    .about-text h2{
+        font-size:2.5rem;
+        line-height:1.2;
+    }
+
+    .about-text p{
+        font-size:1rem;
+        line-height:1.8;
+    }
+
+    .about-image img{
+        width:280px;
+    }
+
+    .about-btn{
+        display:block;
+        width:100%;
+        text-align:center;
+        padding:16px;
+    }
+
+}
+
+/* Phones */
+@media (max-width:576px){
+
+    .about{
+        padding:60px 20px;
+    }
+
+    .about-me{
+        font-size:22px;
+    }
+
+    .about-text h2{
+        font-size:2rem;
+    }
+
+    .about-text p{
+        font-size:.95rem;
+        margin-bottom:25px;
+    }
+
+    .about-image img{
+        width:240px;
+    }
+
+}
+
+/* Small Phones */
+@media (max-width:400px){
+
+    .about{
+        padding:50px 15px;
+    }
+
+    .about-me{
+        font-size:20px;
+    }
+
+    .about-text h2{
+        font-size:1.7rem;
+    }
+
+    .about-text p{
+        font-size:.9rem;
+        line-height:1.7;
+    }
+
+    .about-image img{
+        width:200px;
+    }
+
+    .about-btn{
+        padding:14px;
+        font-size:.95rem;
+    }
+
 }
 /* END OF ABOUT PAGE */
 
@@ -1033,6 +1531,252 @@ justify-content: flex-start;
     width: 100%;
     height: 3px;
     background: #f8f8f856;
+}
+/* ==========================================
+   START YOUR JOURNEY RESPONSIVE
+========================================== */
+
+/* Images */
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* Large Desktop */
+@media (max-width:1400px){
+
+    .navbar2{
+        padding:0 30px;
+    }
+
+    #contact{
+        padding:70px 30px;
+    }
+
+}
+
+/* Laptop */
+@media (max-width:1200px){
+
+    .journey-hero h3{
+        font-size:clamp(2.8rem,5vw,3.8rem);
+        text-align:center;
+    }
+
+    .journey-hero p{
+        max-width:700px;
+        text-align:center;
+        padding:0 20px;
+    }
+
+    #contact{
+        gap:35px;
+    }
+
+    .cta1{
+        padding:40px;
+    }
+
+}
+
+/* Tablet */
+@media (max-width:992px){
+
+    .navbar2{
+        flex-direction:column;
+        gap:20px;
+        padding:20px;
+    }
+
+    .navbar2 ul{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:20px;
+    }
+
+    #contact{
+        flex-direction:column;
+        align-items:center;
+        gap:50px;
+    }
+
+    .cta1,
+    .contact-form,
+    .steps-work{
+        width:100%;
+        max-width:700px;
+    }
+
+    .journey-hero{
+        padding:0 20px;
+        text-align:center;
+    }
+
+    .journey-hero h3{
+        font-size:3rem;
+    }
+
+}
+
+/* Large Phones */
+@media (max-width:768px){
+
+    .start-your-journey{
+        padding-bottom:10rem;
+    }
+
+    .navbar2{
+        padding:15px;
+    }
+
+    .logo2 img{
+        width:150px;
+    }
+
+    .navbar2 ul{
+        gap:15px;
+    }
+
+    .navbar2 a{
+        font-size:14px;
+    }
+
+    .journey-hero h3{
+        font-size:2.5rem;
+        line-height:1.2;
+    }
+
+    .journey-hero p{
+        font-size:1rem;
+    }
+
+    #contact{
+        padding:50px 20px;
+    }
+
+    .cta1{
+        padding:30px 25px;
+    }
+
+    .contact-form h3{
+        font-size:26px;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+        padding:14px;
+    }
+
+    .steps-card{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:15px;
+    }
+
+    .steps-icon{
+        width:65px;
+        height:65px;
+        font-size:1.8rem;
+        margin-bottom:10px;
+    }
+
+    .steps-text{
+        font-size:17px;
+    }
+
+    .steps-work h1{
+        text-align:center;
+        top:0;
+    }
+
+}
+
+/* Phones */
+@media (max-width:576px){
+
+    .journey-hero h3{
+        font-size:2rem;
+    }
+
+    .journey-hero p{
+        font-size:.95rem;
+        line-height:1.7;
+    }
+
+    .cta1{
+        padding:25px 20px;
+    }
+
+    .contact-form h3{
+        font-size:22px;
+    }
+
+    .contact-form button{
+        padding:16px;
+        font-size:1rem;
+    }
+
+    .quote-btn,
+    .cta2{
+        display:inline-block;
+        width:100%;
+        text-align:center;
+        padding:14px;
+    }
+
+    .steps-card h3{
+        font-size:20px;
+    }
+
+    .steps-text{
+        font-size:16px;
+    }
+
+}
+
+/* Small Phones */
+@media (max-width:400px){
+
+    .navbar2{
+        padding:10px;
+    }
+
+    .logo2 img{
+        width:130px;
+    }
+
+    .navbar2 ul{
+        gap:10px;
+    }
+
+    .navbar2 a{
+        font-size:13px;
+    }
+
+    .journey-hero h3{
+        font-size:1.7rem;
+    }
+
+    .journey-hero p{
+        font-size:.9rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+        font-size:.95rem;
+    }
+
+    .steps-icon{
+        width:55px;
+        height:55px;
+        font-size:1.5rem;
+    }
+
+    .steps-card h3{
+        font-size:18px;
+    }
+
 }
 /* END OF START JOURNEY PAGE */
 
@@ -1590,6 +2334,210 @@ justify-content: flex-start;
     color: white;
     line-height: 1.7;
 }
+/* ==========================================
+   VIEW PACKAGE RESPONSIVE
+========================================== */
+
+/* Large Desktop */
+@media (max-width:1400px){
+
+    .pricing-section{
+        padding:100px 30px;
+    }
+
+    .pricing-grid{
+        grid-template-columns:repeat(4,minmax(250px,1fr));
+    }
+
+}
+
+/* Laptop */
+@media (max-width:1200px){
+
+    .pricing-grid{
+        grid-template-columns:repeat(2,minmax(280px,1fr));
+    }
+
+    .section{
+        padding:40px;
+    }
+
+    #steps-pay{
+        flex-direction:column;
+        gap:40px;
+    }
+
+    .secure-work{
+        padding:20px;
+    }
+
+}
+
+/* Tablet */
+@media (max-width:992px){
+
+    .pricing-header h2{
+        font-size:2.8rem;
+    }
+
+    .pricing-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .orderpay{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .find-order-card,
+    #orderFoundCard,
+    .deposit{
+        width:100%;
+        max-width:700px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .pricing-section{
+        padding:70px 20px;
+    }
+
+    .pricing-header h2{
+        font-size:2.2rem;
+    }
+
+    .pricing-grid{
+        grid-template-columns:1fr;
+    }
+
+    .pricing-card{
+        max-width:450px;
+        width:100%;
+        margin:auto;
+    }
+
+    .section{
+        padding:25px;
+    }
+
+    .package{
+        display:block;
+        padding:14px;
+    }
+
+    .card-header,
+    .order-found-header,
+    .order-top-info,
+    .detail-row,
+    .balance-row{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .secure-card{
+        flex-direction:column;
+        text-align:center;
+        align-items:center;
+    }
+
+    .secure-text span::before{
+        display:none;
+    }
+
+}
+
+/* Phones */
+@media (max-width:576px){
+
+    .pricing-section{
+        padding:50px 15px;
+    }
+
+    .pricing-header h2{
+        font-size:2rem;
+    }
+
+    .pricing-card{
+        padding:25px 20px;
+    }
+
+    .price{
+        font-size:2rem;
+    }
+
+    .find-order-card,
+    #orderFoundCard,
+    .deposit{
+        padding:20px;
+    }
+
+    .card-header h2,
+    .order-found-header h2{
+        font-size:1.5rem;
+    }
+
+    .order-top-info h3{
+        word-break:break-word;
+    }
+
+    .secure-work{
+        padding:10px;
+    }
+
+    .secure-work h1{
+        font-size:2rem;
+        text-align:center;
+    }
+
+}
+
+/* Small Phones */
+@media (max-width:400px){
+
+    .pricing-header h2{
+        font-size:1.7rem;
+    }
+
+    .pricing-card{
+        padding:20px 16px;
+    }
+
+    .price{
+        font-size:1.6rem;
+    }
+
+    .pricing-card li{
+        font-size:.85rem;
+    }
+
+    .find-order-card,
+    #orderFoundCard,
+    .deposit{
+        padding:16px;
+    }
+
+    .icon-circle,
+    .success-icon,
+    .secure-icon{
+        width:50px;
+        height:50px;
+        font-size:20px;
+    }
+
+    .balance-row strong{
+        font-size:1.3rem;
+    }
+
+    .pay-btn{
+        padding:14px;
+        font-size:.9rem;
+    }
+
+}
 /* END OF VIEW PACKAGE PAGE */
 
 /* START OF CLIENT INFO PAGE */
@@ -1710,9 +2658,185 @@ input::placeholder {
 .inform-form button:hover {
     transform: translateY(-2px);
 }
+/* ==========================================
+   CLIENT INFO PAGE RESPONSIVE
+========================================== */
+
+/* Images */
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* Large Desktop */
+@media (max-width:1400px){
+
+    #customers{
+        padding:70px 30px;
+    }
+
+}
+
+/* Laptop */
+@media (max-width:1200px){
+
+    #customers{
+        gap:35px;
+    }
+
+    .info1{
+        padding:40px;
+    }
+
+    .client-info h1{
+        font-size:clamp(2.8rem,5vw,3.8rem);
+    }
+
+    .client-info p{
+        text-align:center;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:992px){
+
+    #customers{
+        flex-direction:column;
+        align-items:center;
+        gap:45px;
+    }
+
+    .info1,
+    .inform-form{
+        width:100%;
+        max-width:700px;
+    }
+
+    .client-info{
+        text-align:center;
+        padding:0 20px 10rem;
+    }
+
+}
+
+/* Large Phones */
+@media (max-width:768px){
+
+    .client-info{
+        padding:0 20px 8rem;
+    }
+
+    .client-info h1{
+        font-size:2.5rem;
+        line-height:1.2;
+    }
+
+    .client-info p{
+        font-size:1rem;
+    }
+
+    #customers{
+        padding:50px 20px;
+    }
+
+    .info1{
+        padding:30px 25px;
+    }
+
+    .inform-form h3{
+        font-size:22px;
+    }
+
+    .inform-form input,
+    .inform-form textarea{
+        padding:14px;
+        font-size:1rem;
+    }
+
+    .inform-form button{
+        padding:16px;
+        font-size:1rem;
+    }
+
+}
+
+/* Phones */
+@media (max-width:576px){
+
+    .client-info{
+        padding:0 15px 6rem;
+    }
+
+    .client-info h1{
+        font-size:2rem;
+    }
+
+    .client-info p{
+        font-size:.95rem;
+        line-height:1.7;
+    }
+
+    .info1{
+        padding:25px 20px;
+    }
+
+    .info1 h3{
+        font-size:1.4rem;
+    }
+
+    .inform-form h3{
+        font-size:20px;
+    }
+
+    .inform-form button{
+        width:100%;
+    }
+
+}
+
+/* Small Phones */
+@media (max-width:400px){
+
+    .client-info{
+        padding:0 10px 5rem;
+    }
+
+    .client-info h1{
+        font-size:1.7rem;
+    }
+
+    .client-info p{
+        font-size:.9rem;
+    }
+
+    .info1{
+        padding:20px 18px;
+    }
+
+    .info1 h3{
+        font-size:1.2rem;
+    }
+
+    .inform-form h3{
+        font-size:18px;
+    }
+
+    .inform-form input,
+    .inform-form textarea{
+        padding:12px;
+        font-size:.95rem;
+    }
+
+    .inform-form button{
+        padding:14px;
+        font-size:.95rem;
+    }
+
+}
 /* END OF START CLIENT INFO PAGE */
 
-/* REVIEW ORDER PAGE */
+/* START OF REVIEW ORDER PAGE */
 .review-page{
     background:linear-gradient(to right,#020617,#02325f,#020617);
     min-height:100vh;
@@ -1862,6 +2986,202 @@ input::placeholder {
     margin-top:15px;
     color:#6b7280;
 }
+/* ==========================================
+   REVIEW ORDER RESPONSIVE
+========================================== */
+
+/* Large Desktop */
+@media (max-width:1400px){
+
+    .review-page{
+        padding:70px 30px 12rem;
+    }
+
+    .review-layout{
+        max-width:1100px;
+    }
+
+}
+
+/* Laptop */
+@media (max-width:1200px){
+
+    .review-header h1{
+        font-size:clamp(2.8rem,5vw,3.5rem);
+    }
+
+    .review-header p{
+        max-width:750px;
+    }
+
+    .review-layout{
+        grid-template-columns:1.7fr 1fr;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:992px){
+
+    .review-page{
+        padding:60px 25px 10rem;
+    }
+
+    .review-layout{
+        grid-template-columns:1fr;
+    }
+
+    .checkout-sidebar{
+        position:static;
+        order:-1;
+    }
+
+    .review-header h1{
+        font-size:2.8rem;
+    }
+
+}
+
+/* Large Phones */
+@media (max-width:768px){
+
+    .review-page{
+        padding:50px 20px 8rem;
+    }
+
+    .review-header h1{
+        font-size:2.3rem;
+        line-height:1.2;
+    }
+
+    .review-header p{
+        font-size:1rem;
+        line-height:1.7;
+    }
+
+    .review-box,
+    .order-summary-card{
+        padding:25px;
+    }
+
+    .review-top{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    .package-summary{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .package-summary span{
+        font-size:1.8rem;
+    }
+
+    .client-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+}
+
+/* Phones */
+@media (max-width:576px){
+
+    .review-page{
+        padding:40px 15px 6rem;
+    }
+
+    .review-header h1{
+        font-size:2rem;
+    }
+
+    .review-header p{
+        font-size:.95rem;
+    }
+
+    .review-box,
+    .order-summary-card{
+        padding:20px;
+    }
+
+    .package-summary h3{
+        font-size:1.3rem;
+    }
+
+    .package-summary span{
+        font-size:1.5rem;
+    }
+
+    .package-features li{
+        font-size:.95rem;
+    }
+
+    .summary-row{
+        font-size:.95rem;
+    }
+
+    .continue-payment{
+        padding:16px;
+        font-size:1rem;
+    }
+
+}
+
+/* Small Phones */
+@media (max-width:400px){
+
+    .review-page{
+        padding:35px 12px 5rem;
+    }
+
+    .review-header h1{
+        font-size:1.7rem;
+    }
+
+    .review-header p{
+        font-size:.9rem;
+    }
+
+    .review-box,
+    .order-summary-card{
+        padding:16px;
+        border-radius:16px;
+    }
+
+    .package-summary h3{
+        font-size:1.1rem;
+    }
+
+    .package-summary span{
+        font-size:1.3rem;
+    }
+
+    .package-features li{
+        font-size:.85rem;
+    }
+
+    .client-grid label,
+    .client-grid p{
+        font-size:.9rem;
+    }
+
+    .summary-row{
+        font-size:.9rem;
+    }
+
+    .continue-payment{
+        padding:14px;
+        font-size:.95rem;
+    }
+
+    .secure-note{
+        font-size:.8rem;
+    }
+
+}
 /* END OF REVIEW ORDER PAGE */
 
 /* FAQ PAGE */
@@ -1936,9 +3256,171 @@ input::placeholder {
     color: white;
     font-weight: 600;
 }
+/* ==========================================
+   FAQ PAGE RESPONSIVE
+========================================== */
+
+/* Large Desktop */
+@media (max-width:1400px){
+
+    .faq-section{
+        max-width:1000px;
+        padding:70px 30px;
+    }
+
+}
+
+/* Laptop */
+@media (max-width:1200px){
+
+    .faq-title h3{
+        font-size:clamp(2.8rem,5vw,3.5rem);
+    }
+
+    .faq-title p{
+        max-width:700px;
+        margin:auto;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:992px){
+
+    .faq-page{
+        padding-bottom:12rem;
+    }
+
+    .faq-section{
+        padding:60px 25px;
+    }
+
+    .faq-title h3{
+        font-size:3rem;
+    }
+
+    .faq-title p{
+        font-size:1rem;
+    }
+
+    .faq{
+        padding:18px;
+    }
+
+}
+
+/* Large Phones */
+@media (max-width:768px){
+
+    .faq-page{
+        padding-bottom:8rem;
+    }
+
+    .faq-section{
+        padding:50px 20px;
+    }
+
+    .faq-title h3{
+        font-size:2.5rem;
+        line-height:1.2;
+    }
+
+    .faq-title p{
+        font-size:1rem;
+        line-height:1.7;
+    }
+
+    .faq summary{
+        font-size:1rem;
+        line-height:1.5;
+        padding-right:35px;
+        position:relative;
+    }
+
+    .faq summary::after{
+        position:absolute;
+        right:0;
+        top:0;
+    }
+
+    .faq p{
+        font-size:.95rem;
+        line-height:1.7;
+    }
+
+}
+
+/* Phones */
+@media (max-width:576px){
+
+    .faq-page{
+        padding-bottom:6rem;
+    }
+
+    .faq-title h3{
+        font-size:2rem;
+    }
+
+    .faq-title p{
+        font-size:.95rem;
+    }
+
+    .faq{
+        padding:16px;
+    }
+
+    .faq summary{
+        font-size:.95rem;
+    }
+
+    .faq p{
+        font-size:.9rem;
+    }
+
+}
+
+/* Small Phones */
+@media (max-width:400px){
+
+    .faq-page{
+        padding-bottom:5rem;
+    }
+
+    .faq-section{
+        padding:40px 15px;
+    }
+
+    .faq-title h3{
+        font-size:1.7rem;
+    }
+
+    .faq-title p{
+        font-size:.9rem;
+    }
+
+    .faq{
+        padding:14px;
+    }
+
+    .faq summary{
+        font-size:.9rem;
+        padding-right:30px;
+    }
+
+    .faq summary::after{
+        font-size:1.2rem;
+    }
+
+    .faq p{
+        font-size:.85rem;
+        line-height:1.6;
+    }
+
+}
 /* END OF FAQ PAGE */
 
-/* TERMS OF SERVICES */
+
+/* START OF TERMS/PRIVACY PAGES */
 .terms-section{
     padding:120px 20px;
     background:linear-gradient(to right,#020617,#02325f,#020617);
@@ -2053,7 +3535,227 @@ input::placeholder {
     background:#2563eb;
     color:white;
 }
+/* ==========================================
+   TERMS & PRIVACY RESPONSIVE
+========================================== */
+
+/* Large Desktop */
+@media (max-width:1400px){
+
+    .terms-section{
+        padding:100px 30px 12rem;
+    }
+
+    .container{
+        max-width:1000px;
+    }
+
+}
+
+/* Laptop */
+@media (max-width:1200px){
+
+    .terms-header h1{
+        font-size:clamp(3rem,5vw,4rem);
+    }
+
+    .terms-header p{
+        max-width:750px;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:992px){
+
+    .terms-section{
+        padding:80px 25px 10rem;
+    }
+
+    .terms-header{
+        margin-bottom:45px;
+    }
+
+    .terms-header h1{
+        font-size:3rem;
+    }
+
+    .terms-card{
+        padding:25px;
+    }
+
+    .term-header{
+        gap:15px;
+    }
+
+    .term-header h3{
+        font-size:1.4rem;
+    }
+
+    .term-content{
+        padding-left:60px;
+    }
+
+}
+
+/* Large Phones */
+@media (max-width:768px){
+
+    .terms-section{
+        padding:70px 20px 8rem;
+    }
+
+    .terms-header h1{
+        font-size:2.5rem;
+        line-height:1.2;
+    }
+
+    .terms-header p{
+        font-size:1rem;
+        line-height:1.7;
+    }
+
+    .terms-card{
+        padding:20px;
+    }
+
+    .term-header{
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    .number{
+        width:40px;
+        height:40px;
+        min-width:40px;
+        font-size:.9rem;
+    }
+
+    .term-header h3{
+        font-size:1.2rem;
+        line-height:1.4;
+    }
+
+    .arrow{
+        font-size:16px;
+    }
+
+    .term-content{
+        padding-left:55px;
+    }
+
+    .term-content p{
+        font-size:.95rem;
+        line-height:1.7;
+    }
+
+}
+
+/* Phones */
+@media (max-width:576px){
+
+    .terms-section{
+        padding:60px 15px 6rem;
+    }
+
+    .terms-header h1{
+        font-size:2rem;
+    }
+
+    .terms-header p{
+        font-size:.95rem;
+    }
+
+    .terms-card{
+        padding:18px;
+    }
+
+    .term-header{
+        gap:12px;
+    }
+
+    .number{
+        width:36px;
+        height:36px;
+        min-width:36px;
+        font-size:.8rem;
+    }
+
+    .term-header h3{
+        font-size:1.05rem;
+    }
+
+    .term-content{
+        padding-left:48px;
+    }
+
+    .term-content p{
+        font-size:.9rem;
+    }
+
+    .last-updated{
+        padding:12px;
+        font-size:.9rem;
+        text-align:center;
+    }
+
+}
+
+/* Small Phones */
+@media (max-width:400px){
+
+    .terms-section{
+        padding:50px 12px 5rem;
+    }
+
+    .terms-header h1{
+        font-size:1.7rem;
+    }
+
+    .terms-header p{
+        font-size:.85rem;
+    }
+
+    .terms-card{
+        padding:15px;
+    }
+
+    .term-header{
+        gap:10px;
+    }
+
+    .number{
+        width:32px;
+        height:32px;
+        min-width:32px;
+        font-size:.75rem;
+    }
+
+    .term-header h3{
+        font-size:.95rem;
+    }
+
+    .term-content{
+        padding-left:42px;
+    }
+
+    .term-content p{
+        font-size:.85rem;
+        line-height:1.6;
+    }
+
+    .arrow{
+        font-size:14px;
+    }
+
+    .last-updated{
+        font-size:.8rem;
+        padding:10px;
+    }
+
+}
 /* END OF TERMS/PRIVACY PAGES */
+
 
 /* THANK YOU PAGE */
 .thank{
@@ -2110,6 +3812,165 @@ input::placeholder {
 .tbtn:hover {
     background: #2563eb;
     transform: translateY(-2px);
+}
+/* ==========================================
+   THANK YOU PAGE RESPONSIVE
+========================================== */
+
+/* Large Desktop */
+@media (max-width:1400px){
+
+    .thank{
+        padding:0 30px;
+    }
+
+}
+
+/* Laptop */
+@media (max-width:1200px){
+
+    .thank-card{
+        max-width:800px;
+        margin:auto;
+    }
+
+    .thank-you{
+        font-size:clamp(3rem,5vw,3.8rem);
+    }
+
+    .request{
+        font-size:1.1rem;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:992px){
+
+    .thank{
+        padding:0 25px;
+    }
+
+    .thank-card{
+        padding:35px 30px;
+    }
+
+    .check{
+        width:90px;
+        height:90px;
+        font-size:36px;
+    }
+
+    .thank-you{
+        font-size:3rem;
+    }
+
+    .request{
+        font-size:1rem;
+    }
+
+}
+
+/* Large Phones */
+@media (max-width:768px){
+
+    .thank{
+        padding:0 20px;
+    }
+
+    .thank-card{
+        padding:30px 25px;
+    }
+
+    .check{
+        width:80px;
+        height:80px;
+        font-size:32px;
+    }
+
+    .thank-you{
+        font-size:2.5rem;
+        line-height:1.2;
+    }
+
+    .request{
+        font-size:1rem;
+        line-height:1.7;
+    }
+
+    .tbtn{
+        display:block;
+        width:100%;
+        text-align:center;
+        padding:16px;
+    }
+
+}
+
+/* Phones */
+@media (max-width:576px){
+
+    .thank{
+        padding:0 15px;
+    }
+
+    .thank-card{
+        padding:25px 20px;
+        border-radius:14px;
+    }
+
+    .check{
+        width:70px;
+        height:70px;
+        font-size:28px;
+    }
+
+    .thank-you{
+        font-size:2rem;
+    }
+
+    .request{
+        font-size:.95rem;
+    }
+
+    .tbtn{
+        font-size:.95rem;
+    }
+
+}
+
+/* Small Phones */
+@media (max-width:400px){
+
+    .thank{
+        padding:0 10px;
+    }
+
+    .thank-card{
+        padding:20px 15px;
+        border-radius:12px;
+    }
+
+    .check{
+        width:60px;
+        height:60px;
+        font-size:24px;
+    }
+
+    .thank-you{
+        font-size:1.7rem;
+    }
+
+    .request{
+        font-size:.9rem;
+        line-height:1.6;
+    }
+
+    .tbtn{
+        padding:14px;
+        font-size:.9rem;
+    }
+
 }
 /* END OF THANK YOU PAGE */
 
@@ -2335,15 +4196,6 @@ input::placeholder {
     gap:10px;
     flex-wrap:wrap;
 }
-
-.plan.active {
-   
-}
-
-.plan.current {
-    
-}
-
 .updates-card ul {
     padding-left: 20px;
 }
@@ -2380,6 +4232,300 @@ input::placeholder {
 
 #dashboard {
     display: none;
+}
+
+/* ==========================================
+   TRACK PROGRESS RESPONSIVE
+========================================== */
+
+/* Large Desktop */
+@media (max-width:1400px){
+
+    .tracker-hero{
+        padding:100px 30px;
+        gap:60px;
+    }
+
+    .project-dashboard{
+        padding:30px;
+    }
+
+}
+
+/* Laptop */
+@media (max-width:1200px){
+
+    .hero-left h1{
+        font-size:clamp(3rem,5vw,4rem);
+    }
+
+    .tracker-box{
+        width:100%;
+        max-width:550px;
+    }
+
+    .dashboard-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:992px){
+
+    .tracker-hero{
+        flex-direction:column;
+        text-align:center;
+        padding:80px 25px;
+        gap:50px;
+    }
+
+    .hero-left p{
+        max-width:700px;
+        margin:auto;
+    }
+
+    .tracker-box{
+        width:100%;
+        max-width:700px;
+    }
+
+    .track-form{
+        flex-direction:column;
+    }
+
+    .track-form button{
+        width:100%;
+    }
+
+    .project-header{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+
+    .details-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cal-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+/* Large Phones */
+@media (max-width:768px){
+
+    .tracker-hero{
+        padding:60px 20px;
+    }
+
+    .hero-left h1{
+        font-size:2.5rem;
+        line-height:1.2;
+    }
+
+    .hero-left p{
+        font-size:1rem;
+        line-height:1.7;
+    }
+
+    .tracker-box{
+        padding:25px;
+    }
+
+    .track-form input,
+    .track-form button{
+        width:100%;
+    }
+
+    .project-dashboard{
+        padding:20px;
+    }
+
+    .project-header h2{
+        font-size:1.8rem;
+    }
+
+    .progress-content{
+        flex-direction:column;
+        gap:25px;
+        text-align:center;
+    }
+
+    .progress-content h1{
+        font-size:3rem;
+    }
+
+    .circle-progress{
+        width:120px;
+        height:120px;
+    }
+
+    .circle-inner{
+        width:85px;
+        height:85px;
+    }
+
+    .cal-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .details-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .plans,
+    .stages,
+    .nums{
+        justify-content:center;
+    }
+
+}
+
+/* Phones */
+@media (max-width:576px){
+
+    .tracker-hero{
+        padding:50px 15px;
+    }
+
+    .hero-left h1{
+        font-size:2rem;
+    }
+
+    .hero-left p{
+        font-size:.95rem;
+    }
+
+    .tracker-box{
+        padding:20px;
+        border-radius:16px;
+    }
+
+    .tracker-box h3{
+        font-size:1.2rem;
+    }
+
+    .track-form input{
+        padding:16px;
+        font-size:.95rem;
+    }
+
+    .track-form button{
+        padding:16px;
+        font-size:.95rem;
+    }
+
+    .prog{
+        padding:20px;
+    }
+
+    .project-header h2{
+        font-size:1.5rem;
+    }
+
+    .status-pill{
+        font-size:.9rem;
+        padding:10px 16px;
+    }
+
+    .progress-content h1{
+        font-size:2.5rem;
+    }
+
+    .circle-progress{
+        width:100px;
+        height:100px;
+    }
+
+    .circle-inner{
+        width:70px;
+        height:70px;
+        font-size:.9rem;
+    }
+
+    .stage,
+    .num{
+        width:42px;
+        height:42px;
+        font-size:.85rem;
+    }
+
+}
+
+/* Small Phones */
+@media (max-width:400px){
+
+    .tracker-hero{
+        padding:40px 10px;
+    }
+
+    .hero-left h1{
+        font-size:1.7rem;
+    }
+
+    .hero-left p{
+        font-size:.9rem;
+    }
+
+    .tracker-box{
+        padding:16px;
+    }
+
+    .tracker-box h3{
+        font-size:1.05rem;
+    }
+
+    .track-form input,
+    .track-form button{
+        padding:14px;
+        font-size:.9rem;
+    }
+
+    .prog{
+        padding:16px;
+    }
+
+    .project-header h2{
+        font-size:1.3rem;
+    }
+
+    .status-pill{
+        font-size:.8rem;
+        padding:8px 14px;
+    }
+
+    .progress-content h1{
+        font-size:2rem;
+    }
+
+    .circle-progress{
+        width:90px;
+        height:90px;
+    }
+
+    .circle-inner{
+        width:60px;
+        height:60px;
+        font-size:.8rem;
+    }
+
+    .stage,
+    .num{
+        width:36px;
+        height:36px;
+        font-size:.75rem;
+    }
+
+    .details-grid p,
+    .cal-grid{
+        font-size:.9rem;
+    }
+
 }
 /* END OF TRACK PROGRESS PAGE */
 
@@ -2542,7 +4688,256 @@ input::placeholder {
     display:block;
     color:#6b7280;
 }
-/* END OF SUCCESS/SUCESS DEPOSIT PAGE */
+/* ==========================================
+   SUCCESS PAGE RESPONSIVE
+========================================== */
+
+/* Large Desktop */
+@media (max-width:1400px){
+
+    .success-hero{
+        padding-bottom:12rem;
+    }
+
+    .order-section{
+        padding:0 30px;
+    }
+
+}
+
+/* Laptop */
+@media (max-width:1200px){
+
+    .success-hero h1{
+        font-size:clamp(3rem,5vw,4rem);
+    }
+
+    .success-hero p{
+        font-size:1.2rem;
+    }
+
+    .order-card{
+        padding:40px;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:992px){
+
+    .success-hero{
+        padding-bottom:10rem;
+    }
+
+    .success-hero h1{
+        font-size:3rem;
+    }
+
+    .order-section{
+        margin:-60px auto 60px;
+        padding:0 25px;
+    }
+
+    .order-number-box{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .email-box{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+}
+
+/* Large Phones */
+@media (max-width:768px){
+
+    .success-hero{
+        padding-bottom:8rem;
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .check-circle{
+        width:80px;
+        height:80px;
+        font-size:32px;
+    }
+
+    .success-hero h1{
+        font-size:2.5rem;
+        line-height:1.2;
+    }
+
+    .success-hero p{
+        font-size:1rem;
+        line-height:1.7;
+    }
+
+    .order-card{
+        padding:30px 25px;
+    }
+
+    .order-number-box{
+        padding:25px;
+    }
+
+    .order-number-box span{
+        font-size:2rem;
+        word-break:break-word;
+    }
+
+    .copy-btn{
+        width:100%;
+        padding:14px;
+    }
+
+    .info-item{
+        align-items:flex-start;
+    }
+
+    .icon-circle2{
+        width:60px;
+        height:60px;
+        font-size:22px;
+        flex-shrink:0;
+    }
+
+    .email-icon{
+        width:55px;
+        height:55px;
+        font-size:20px;
+    }
+
+    .track-btn{
+        width:100%;
+        justify-content:center;
+        padding:16px;
+        font-size:1rem;
+    }
+
+}
+
+/* Phones */
+@media (max-width:576px){
+
+    .success-hero{
+        padding-bottom:6rem;
+    }
+
+    .success-hero h1{
+        font-size:2rem;
+    }
+
+    .success-hero p{
+        font-size:.95rem;
+    }
+
+    .order-section{
+        padding:0 15px;
+    }
+
+    .order-card{
+        padding:20px;
+    }
+
+    .order-number-box{
+        padding:20px;
+    }
+
+    .order-number-box span{
+        font-size:1.6rem;
+    }
+
+    .info-item{
+        flex-direction:column;
+        text-align:center;
+        align-items:center;
+        gap:15px;
+    }
+
+    .email-box{
+        padding:20px;
+    }
+
+    .track-btn{
+        font-size:.95rem;
+    }
+
+}
+
+/* Small Phones */
+@media (max-width:400px){
+
+    .success-hero{
+        padding-bottom:5rem;
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    .check-circle{
+        width:70px;
+        height:70px;
+        font-size:28px;
+    }
+
+    .success-hero h1{
+        font-size:1.7rem;
+    }
+
+    .success-hero p{
+        font-size:.9rem;
+    }
+
+    .order-card{
+        padding:16px;
+        border-width:5px;
+    }
+
+    .order-number-box{
+        padding:15px;
+    }
+
+    .order-number-box span{
+        font-size:1.3rem;
+    }
+
+    .copy-btn{
+        font-size:.9rem;
+        padding:12px;
+    }
+
+    .icon-circle2{
+        width:50px;
+        height:50px;
+        font-size:18px;
+    }
+
+    .email-icon{
+        width:48px;
+        height:48px;
+        font-size:18px;
+    }
+
+    .track-btn{
+        padding:14px;
+        font-size:.9rem;
+    }
+
+    .track-section small{
+        font-size:.8rem;
+    }
+
+}
+/* END OF SUCCESS/SUCCESS DEPOSIT PAGE */
 
 /* START OF FOOTER PAGE */
 .grid-questions{
@@ -2584,848 +4979,151 @@ input::placeholder {
 .terms:hover{
     color: #2563eb;
 }
+/* ==========================================
+   FOOTER RESPONSIVE
+========================================== */
 
-/* =========================
-   RESPONSIVE FIX (MOBILE)
-========================= */
-@media (max-width: 1024px) {
-    .hero,
-    .index-hero,
-    .services,
-    .process,
-    .about,
-    .projects,
-    footer {
-        padding: 60px 40px;
+/* Large Desktop */
+@media (max-width:1400px){
+
+    footer{
+        padding:70px 40px;
     }
 
-    .hero-text h1 {
-        font-size: 55px;
-    }
-
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-image img {
-        width: 100%;
-    }
-
-    .nav-links {
-        gap: 15px;
-        margin-right: 20px;
-        flex-wrap: wrap;
-    }
-
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .tracker-box {
-        width: 100%;
-    }
 }
 
-@media (max-width: 768px) {
-    .hero,
-    .index-hero,
-    .services,
-    .process,
-    .about,
-    .projects,
-    footer {
-        padding: 40px 20px;
+/* Laptop */
+@media (max-width:1200px){
+
+    .footer-grid{
+        gap:40px;
     }
 
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
+    .footer-column{
+        flex:1 1 220px;
     }
 
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 0;
-    }
-
-    .hero-text h1 {
-        font-size: 40px;
-    }
-
-    .hero-text p {
-        font-size: 18px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .services-grid {
-        gap: 30px;
-    }
-
-    .process-grid {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .process-grid::before {
-        display: none;
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .cta-box {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .dashboard-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .tracker-hero {
-        flex-direction: column;
-    }
-
-    .tracker-box {
-        width: 100%;
-    }
 }
 
-@media (max-width: 480px) {
-    .hero-text h1 {
-        font-size: 32px;
-    }
-
-    .hero-text p {
-        font-size: 16px;
-    }
-
-    .btn1,
-    .btn2 {
-        width: 100%;
-        text-align: center;
-    }
-
-    .service-card {
-        width: 100%;
-    }
-
-    .cta-left h2 {
-        font-size: 28px;
-    }
-
-    .project-card {
-        width: 100%;
-    }
-
-    .circle-progress {
-        width: 110px;
-        height: 110px;
-    }
-
-    .circle-inner {
-        width: 80px;
-        height: 80px;
-    }
-}
-
-
-/* ==========================
-START YOUR JOURNEY RESPONSIVE
-========================== */
 /* Tablets */
-@media (max-width:1024px){
+@media (max-width:992px){
 
-    #contact{
-        flex-direction:column;
-        gap:60px;
+    footer{
         padding:60px 30px;
     }
 
-    .cta1{
-        width:100%;
-        max-width:800px;
+    .footer-grid{
+        justify-content:center;
+        text-align:center;
+        gap:35px;
     }
 
-    .steps-work{
-        padding:0;
+    .footer-column{
+        flex:1 1 300px;
     }
 
-    .steps-text span::before{
-        display:none;
+    .footer-logo{
+        justify-content:center;
     }
+
 }
 
-
-/* Phones */
+/* Large Phones */
 @media (max-width:768px){
 
-    .journey-hero{
-        text-align:center;
-        padding:40px 20px;
+    footer{
+        padding:50px 20px;
     }
 
-    .journey-hero h3{
-        font-size:2.5rem;
-    }
-
-    .journey-hero p{
-        font-size:1rem;
-    }
-
-    #contact{
+    .footer-grid{
         flex-direction:column;
-        gap:50px;
-        padding:40px 20px;
-    }
-
-    .cta1{
-        width:100%;
-        padding:30px 20px;
-    }
-
-    .contact-form{
-        width:100%;
-    }
-
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form button{
-        width:100%;
-    }
-
-    .steps-grid{
-        width:100%;
-    }
-
-    .steps-work{
-        padding:0;
-        text-align:center;
-    }
-
-    .steps-work h1{
-        top:0;
-        font-size:2rem;
-    }
-
-    .steps-card{
-        flex-direction:column;
-        text-align:center;
         align-items:center;
+        text-align:center;
+        gap:40px;
+    }
+
+    .footer-column{
+        width:100%;
+        max-width:400px;
+    }
+
+    .footer-logo{
+        justify-content:center;
+        flex-direction:column;
         gap:15px;
-        margin-top:40px;
     }
 
-    .steps-icon{
-        margin-bottom:0;
+    .footer-logo img{
+        width:60px;
     }
 
-    .steps-text{
-        font-size:1rem;
+    .footer-column h3{
+        margin-bottom:15px;
     }
 
-    .steps-text h3{
-        font-size:1.3rem;
+    .footer-column a{
+        margin-bottom:12px;
     }
 
-    .steps-text p br{
-        display:none;
-    }
-
-    .steps-text span::before{
-        display:none;
-    }
-
-    .quote-btn{
-        display:inline-block;
-        margin-top:15px;
-    }
-}
-
-
-/* Small phones */
-@media (max-width:480px){
-
-    .journey-hero h3{
-        font-size:2rem;
-    }
-
-    .steps-work h1{
-        font-size:1.7rem;
-    }
-
-    .steps-text h3{
-        font-size:1.1rem;
-    }
-
-    .steps-text{
+    .copy-right{
+        padding-top:35px;
+        text-align:center;
         font-size:.95rem;
     }
 
-    .cta1{
-        padding:25px 15px;
-    }
 }
 
+/* Phones */
+@media (max-width:576px){
 
-/* =========================
-TRACK PROGRESS RESPONSIVE
-========================= */
-@media screen and (max-width: 1024px){
-
-    .tracker-hero{
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 40px;
-    }
-
-    .tracker-box{
-        width:100%;
-        max-width:600px;
-    }
-
-    .dashboard-grid{
-        grid-template-columns:1fr;
-    }
-
-    .details-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-}
-
-@media screen and (max-width:768px){
-
-    /* Hero */
-    .hero-left h1{
-        font-size:2.8rem;
-    }
-
-    .hero-left p{
-        max-width:100%;
-    }
-
-    /* Search Box */
-    .track-form{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .track-form button{
-        width:100%;
-    }
-
-    /* Header */
-    .project-header{
-        flex-direction:column;
-        text-align:center;
-        gap:20px;
-    }
-
-    /* Progress Card */
-    .progress-content{
-        flex-direction:column;
-        text-align:center;
-        gap:25px;
-    }
-
-    .progress-content h1{
-        font-size:3rem;
-    }
-
-    .circle-progress{
-        width:120px;
-        height:120px;
-    }
-
-    .circle-inner{
-        width:85px;
-        height:85px;
-    }
-
-    /* Stages */
-    .stages,
-    .nums,
-    .plans{
-        display:grid;
-        grid-template-columns:repeat(3,1fr);
-        gap:25px;
-        text-align:center;
-    }
-
-    .plan{
-        width:auto;
-        line-height:1.4;
-        font-size:14px;
-    }
-
-    /* Details */
-    .cal-grid,
-    .details-grid{
-        grid-template-columns:1fr;
-        gap:20px;
-    }
-
-    /* Footer */
-    .footer-grid{
-        flex-direction:column;
-        gap:40px;
-        text-align:center;
-    }
-}
-
-@media screen and (max-width:480px){
-
-    .hero-left h1{
-        font-size:2.2rem;
-    }
-
-    .progress-content h1{
-        font-size:2.5rem;
-    }
-
-    .status-pill{
-        font-size:14px;
-        padding:10px 16px;
-    }
-
-    .stages,
-    .nums,
-    .plans{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .plan{
-        font-size:13px;
-    }
-}
-
-
-/* =======================
-VIEW PACKAGE RESPONSIVE
-======================= */
-
-@media screen and (max-width:1200px){
-
-    #package{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    #steps-pay{
-        flex-direction:column;
-        gap:50px;
-    }
-}
-
-@media screen and (max-width:768px){
-
-    /* Payment Hero */
-    .payment-hero{
-        text-align:center;
-        padding:0 20px;
-    }
-
-    .payment-hero h3{
-        font-size:2rem;
-    }
-
-    .payment-hero p br{
-        display:none;
-    }
-
-    /* Package Cards */
-    #package{
-        grid-template-columns:1fr;
-    }
-
-    .package-hero{
-        width:100%;
-    }
-
-    .package-select{
-        width:100%;
-    }
-
-    .landing-page{
-        padding:20px;
-    }
-
-    .landing-page h1{
-        text-align:center;
-    }
-
-    .landing-page p{
-        font-size:15px;
-    }
-
-    /* Add-ons */
-    .extra-add{
-        padding:20px;
-        text-align:center;
-    }
-
-    .extra-add p br{
-        display:none;
-    }
-
-    /* Payment Section */
-    #steps-pay{
-        flex-direction:column;
-        gap:40px;
-    }
-
-    .secure-grid{
-        width:100%;
-    }
-
-    .secure-card{
-        flex-direction:column;
-        text-align:center;
-        gap:15px;
-    }
-
-    .secure-text p br{
-        display:none;
-    }
-
-    /* Find Order Card */
-    .find-order-card{
-        width:100%;
-        max-width:100%;
-    }
-
-    .find-order-card input{
-        width:100%;
-    }
-
-    /* Order Found Card */
-    .order-found-card{
-        width:100%;
-    }
-
-    .order-top-info{
-        flex-direction:column;
-        gap:20px;
-    }
-
-    .detail-row{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:5px;
-    }
-
-    .balance-row{
-        flex-direction:column;
-        gap:10px;
-        align-items:flex-start;
-    }
-
-    /* Footer */
-    .footer-grid{
-        flex-direction:column;
-        text-align:center;
-        gap:40px;
-    }
-}
-
-
-/* Small phones */
-@media screen and (max-width:480px){
-
-    .payment-hero h3{
-        font-size:1.8rem;
-    }
-
-    .hero-color{
-        font-size:1.8rem;
-    }
-
-    .price{
-        font-size:2.5rem;
-    }
-
-    .text-quote{
-        font-size:1rem;
-    }
-
-    .package-text{
-        font-size:1rem;
-    }
-
-    .landing-page p{
-        font-size:14px;
-    }
-
-    .get-started .package{
-        width:100%;
-        display:block;
-        text-align:center;
-    }
-}
-
-
-/* ==========================
-ABOUT PAGE RESPONSIVE
-========================== */
-@media screen and (max-width:1024px){
-
-    .about{
-        padding:80px 40px;
-    }
-
-    .about-container{
-        flex-direction:column;
-        gap:50px;
-        text-align:center;
-    }
-
-    .about-image img{
-        width:100%;
-        max-width:600px;
-    }
-
-    .about-text{
-        max-width:800px;
-    }
-}
-
-@media screen and (max-width:768px){
-
-    .about{
-        padding:60px 20px;
-    }
-
-    .about-container{
-        flex-direction:column;
-        align-items:center;
-        text-align:center;
-        gap:40px;
-    }
-
-    .about-image{
-        width:100%;
-    }
-
-    .about-image img{
-        width:100%;
-        max-width:500px;
-        height:auto;
-    }
-
-    .about-me{
-        margin:auto;
-    }
-
-    .about-text{
-        width:100%;
-    }
-
-    .about-text h2{
-        font-size:2.5rem;
-    }
-
-    .about-text p{
-        font-size:1rem;
-        line-height:1.8;
-    }
-
-    .about-btn{
-        display:inline-block;
-        margin-top:20px;
-    }
-
-    .footer-grid{
-        flex-direction:column;
-        text-align:center;
-        gap:40px;
-    }
-}
-
-@media screen and (max-width:480px){
-
-    .about{
-        padding:50px 15px;
+    footer{
+        padding:40px 15px;
     }
 
-    .about-text h2{
-        font-size:2rem;
+    .footer-logo img{
+        width:55px;
     }
 
-    .about-text p{
-        font-size:0.95rem;
+    .footer-column h3{
+        font-size:1.2rem;
     }
 
-    .about-image img{
-        max-width:100%;
+    .footer-column p,
+    .footer-column a{
+        font-size:.95rem;
+        line-height:1.6;
     }
 
-    .about-btn{
-        width:100%;
-        text-align:center;
-        padding:15px;
+    .copy-right{
+        font-size:.9rem;
+        line-height:1.6;
     }
-}
-
-
-/* ==========================
-GLOBAL RESPONSIVE FIXES
-========================== */
-*{
-    box-sizing:border-box;
-}
-
-img{
-    max-width:100%;
-    height:auto;
-}
-
-
-/* ==========================
-TABLETS
-========================== */
-
-@media screen and (max-width:1024px){    
 
 }
 
+/* Small Phones */
+@media (max-width:400px){
 
-/* ==========================
-PHONES
-========================== */
-@media screen and (max-width:768px){
-
-    /* Hero sections */
-    .tracker-hero,
-    .about-container{
-        flex-direction:column;
-        text-align:center;
-        gap:40px;
+    footer{
+        padding:35px 12px;
     }
 
-    .hero-left h1,
-    .success-hero h1,
-    .about-text h2{
-        font-size:2.5rem;
+    .footer-logo img{
+        width:50px;
     }
 
-    /* Search form */
-    .track-form{
-        flex-direction:column;
-        gap:15px;
+    .footer-column h3{
+        font-size:1.1rem;
     }
 
-    .track-form button{
-        width:100%;
+    .footer-column p,
+    .footer-column a{
+        font-size:.85rem;
     }
 
-    /* Project header */
-    .project-header{
-        flex-direction:column;
-        text-align:center;
-        gap:20px;
-    }
-
-    /* Progress card */
-    .progress-content{
-        flex-direction:column;
-        text-align:center;
-        gap:25px;
-    }
-
-    /* Stage icons and labels */
-    .stages,
-    .nums,
-    .plans{
-        display:grid;
-        grid-template-columns:repeat(3,1fr);
-        gap:25px;
-        text-align:center;
-    }
-
-    .plan{
-        width:auto;
-        font-size:14px;
-        line-height:1.5;
-    }
-
-    /* Dashboard cards */
-    .dashboard-grid,
-    .details-grid,
-    .info-grid,
-    .cal-grid{
-        grid-template-columns:1fr;
-    }
-
-    /* Success page */
-    .order-number-box{
-        flex-direction:column;
-        gap:20px;
-        text-align:center;
-    }
-
-    .email-box{
-        flex-direction:column;
-        text-align:center;
-        gap:20px;
-    }
-
-    .info-item{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .track-btn,
-    .copy-btn{
-        width:100%;
-    }
-
-    /* Footer */
-    .footer-grid{
-        flex-direction:column;
-        text-align:center;
-        gap:40px;
-    }
-}
-
-
-/* ==========================
-SMALL PHONES
-========================== */
-
-@media screen and (max-width:480px){
-
-    .hero-left h1,
-    .success-hero h1,
-    .about-text h2{
-        font-size:2rem;
-    }
-
-    .stages,
-    .nums,
-    .plans{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .plan{
-        font-size:13px;
-    }
-}
-
-@media(max-width:900px){
-
-    .review-layout{
-        grid-template-columns:1fr;
-    }
-
-    .client-grid{
-        grid-template-columns:1fr;
+    .copy-right{
+        font-size:.8rem;
     }
 
 }
+/* END OF FOOTER PAGE */

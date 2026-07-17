@@ -587,96 +587,186 @@
 }
 
 /* ==========================================
-   RESPONSIVE CSS
-   Add this at the very bottom
+   FINAL SECTION RESPONSIVE OVERRIDES
 ========================================== */
 
-/* Prevent horizontal scrolling */
-html,
-body{
-    width:100%;
-    overflow-x:hidden;
-}
+/* =========================
+   HERO SECTION
+========================= */
 
-img{
-    max-width:100%;
-    height:auto;
-}
+@media(max-width:768px){
 
-/* -----------------------------
-   Large Laptops
-------------------------------*/
-
-@media (max-width:1400px){
-
-    .navbar,
-    .hero-content,
-    .features,
-    .as-services-section,
-    .as-showcase,
-    .as-process-section{
-        padding-left:30px;
-        padding-right:30px;
+    .index-hero,
+    .hero{
+        padding:30px 20px;
     }
-
-    .hero h1{
-        font-size:clamp(3rem,5vw,4.5rem);
-    }
-
-}
-
-/* -----------------------------
-   Tablets
-------------------------------*/
-
-@media (max-width:1100px){
-
     .hero-content{
         flex-direction:column;
         text-align:center;
-        gap:70px;
+        min-height:auto;
+        gap:40px;
     }
-
-    .hero-left,
-    .hero-right{
+    .hero-text{
+        max-width:100%;
+    }
+    .hero-text h1{
+        font-size:2.5rem;
+    }
+    .hero-text p{
+        font-size:1rem;
+    }
+    .hero-buttons{
+        flex-direction:column;
+        width:100%;
+    }
+    .btn1,
+    .btn2{
+        width:100%;
+        text-align:center;
+    }
+    .hero-image img{
         width:100%;
     }
 
-    .hero p{
-        margin:0 auto 40px;
-    }
+}
+/* =========================
+   NAVBAR
+========================= */
 
-    .buttons{
-        justify-content:center;
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:25px;
+    }
+    .logo h1{
+        font-size:28px;
+    }
+    .logo img{
+        width:70px;
+    }
+    .nav-links{
+        margin:0;
+        gap:20px;
         flex-wrap:wrap;
+        justify-content:center;
     }
 
-    .logo-wrapper{
-        width:480px;
-        height:480px;
-    }
+}
+/* =========================
+   SERVICES SECTION
+========================= */
 
-    .main-logo{
-        width:380px;
-    }
-
-    .features{
+@media(max-width:1100px){
+    .as-feature-grid{
         grid-template-columns:repeat(2,1fr);
     }
+}
 
-    .as-showcase{
+@media(max-width:768px){
+
+    .as-services-section{
+        padding:70px 20px;
+    }
+    .as-heading-wrap{
+        margin-bottom:40px;
+    }
+    .as-main-title{
+        font-size:2.3rem;
+    }
+    .as-main-text{
+        width:100%;
+        font-size:1rem;
+    }
+    .as-feature-grid{
         grid-template-columns:1fr;
-        text-align:center;
-        gap:60px;
+        gap:20px;
+    }
+    .as-feature-card{
+        padding:25px;
+    }
+    .as-feature-card h3{
+        font-size:1.35rem;
+    }
+    .as-feature-card p{
+        font-size:.95rem;
+    }
+    .as-arrow{
+        right:20px;
+        bottom:20px;
+        width:38px;
+        height:38px;
     }
 
+}
+
+/* =========================
+   SHOWCASE SECTION
+========================= */
+
+@media(max-width:900px){
+
+    .as-showcase{
+
+        grid-template-columns:1fr;
+        padding:0 20px;
+        text-align:center;
+        gap:40px;
+
+    }
+    .as-showcase-left h2{
+        font-size:2.2rem;
+    }
+    .as-browser-window{
+        width:100%;
+    }
     .as-browser-content{
         grid-template-columns:1fr;
-        gap:40px;
+    }
+    .as-browser-art{
+        height:220px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .as-showcase-left h2{
+        font-size:1.8rem;
+    }
+
+    .as-browser-top{
+        padding:0 15px;
+    }
+
+    .as-browser-body{
+        padding:20px;
+    }
+
+    .as-browser-nav div{
+        gap:15px;
+    }
+
+}
+
+/* =========================
+   PROCESS SECTION
+========================= */
+
+@media(max-width:900px){
+
+    .as-process-section{
+        padding:0 20px;
+    }
+
+    .as-process-header h2{
+        font-size:2.2rem;
     }
 
     .as-process-line{
-        grid-template-columns:repeat(2,1fr);
+
+        grid-template-columns:1fr;
+
     }
 
     .as-process-line::before{
@@ -685,249 +775,57 @@ img{
 
 }
 
-/* -----------------------------
-   Small Tablets
-------------------------------*/
+@media(max-width:480px){
 
-@media (max-width:900px){
-
-    .navbar{
-        flex-direction:column;
-        gap:20px;
-        padding:20px;
-    }
-
-    .navbar ul{
-        justify-content:center;
-        flex-wrap:wrap;
-        gap:20px;
-    }
-
-    .hero{
-        padding-bottom:10rem;
-    }
-
-    .hero-content{
-        padding:80px 25px;
-    }
-
-    .hero h1{
-        font-size:3rem;
-    }
-
-    .hero p{
-        font-size:1.1rem;
-    }
-
-    .logo-wrapper{
-        width:360px;
-        height:360px;
-    }
-
-    .main-logo{
-        width:300px;
-    }
-
-    .features{
-        grid-template-columns:1fr;
-    }
-
-    .as-browser-nav{
-        flex-direction:column;
-        gap:20px;
-        align-items:center;
-    }
-
-    .as-browser-nav div{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-}
-
-/* -----------------------------
-   Phones
-------------------------------*/
-
-@media (max-width:768px){
-
-    section{
-        padding-left:20px;
-        padding-right:20px;
-    }
-
-    .hero-content{
-        padding:70px 20px;
-    }
-
-    .badge{
-        font-size:11px;
-        letter-spacing:1px;
-    }
-
-    .hero h1{
-        font-size:2.4rem;
-        line-height:1.2;
-    }
-
-    .hero p{
-        font-size:1rem;
-        line-height:1.7;
-    }
-
-    .buttons{
-        flex-direction:column;
-        width:100%;
-    }
-
-    .primary,
-    .secondary{
-        width:100%;
-        text-align:center;
-    }
-
-    .logo-wrapper{
-        width:280px;
-        height:280px;
-    }
-
-    .main-logo{
-        width:230px;
-    }
-
-    .glow{
-        width:180px;
-        height:180px;
-    }
-
-    .as-main-title,
-    .as-showcase-left h2,
-    .as-process-header h2{
-        font-size:2.2rem;
-    }
-
-    .as-browser-address{
-        width:100%;
-        font-size:.8rem;
-    }
-
-    .as-browser-body{
-        padding:25px;
-    }
-
-    .as-browser-text h3{
-        font-size:2rem;
-    }
-
-    .as-browser-buttons{
-        flex-direction:column;
-    }
-
-    .as-browser-buttons button{
-        width:100%;
-    }
-
-    .as-feature-card,
-    .card{
-        padding:28px;
-    }
-
-    .as-process-line{
-        grid-template-columns:1fr;
-    }
-
-}
-
-/* -----------------------------
-   Small Phones
-------------------------------*/
-
-@media (max-width:480px){
-
-    .navbar{
-        padding:15px;
-    }
-
-    .logo img{
-        width:140px;
-    }
-
-    .navbar ul{
-        gap:15px;
-    }
-
-    .navbar a{
-        font-size:14px;
-    }
-
-    .hero{
-        min-height:auto;
-    }
-
-    .hero h1{
-        font-size:2rem;
-    }
-
-    .hero p{
-        font-size:.95rem;
-    }
-
-    .logo-wrapper{
-        width:220px;
-        height:220px;
-    }
-
-    .main-logo{
-        width:180px;
-    }
-
-    .hero-content{
-        gap:50px;
-    }
-
-    .card,
-    .as-feature-card{
-        padding:22px;
-    }
-
-    .as-main-title,
-    .as-showcase-left h2,
     .as-process-header h2{
         font-size:1.8rem;
     }
 
-    .as-browser-text h3{
-        font-size:1.6rem;
+
+    .as-step-circle{
+        width:60px;
+        height:60px;
+    }
+
+
+    .as-process-step h3{
+        font-size:1.25rem;
+    }
+
+
+    .as-process-step p{
+        font-size:.95rem;
     }
 
 }
 
-/* -----------------------------
-   Very Small Phones
-------------------------------*/
+/* =========================
+   VERY SMALL PHONES
+========================= */
 
-@media (max-width:360px){
+@media(max-width:360px){
 
-    .hero h1{
+    .hero-text h1{
         font-size:1.7rem;
     }
 
-    .hero p{
-        font-size:.9rem;
+
+    .as-main-title{
+        font-size:1.6rem;
     }
 
-    .primary,
-    .secondary{
-        padding:15px;
-        font-size:.9rem;
+
+    .as-showcase-left h2{
+        font-size:1.6rem;
     }
 
-    .main-logo{
-        width:150px;
+
+    .as-browser-text h3{
+        font-size:1.5rem;
     }
 
 }
-/* END OF INDEX */
+/* END OF INDEX PAGE */
 
 /* FOOTER */
 .index-footer{
